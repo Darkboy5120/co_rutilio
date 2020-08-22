@@ -23,10 +23,10 @@
           <li class="nav-item">
             <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="client_signin.php">Client</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="provider_signin.php">Provider</a>
           </li>
         </ul>
@@ -40,16 +40,13 @@
         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" id="exampleInputRestaurant1" placeholder="Restaurant name">
-      </div>
-      <div class="form-group">
         <input type="text" class="form-control" id="exampleInputPhone1" placeholder="Phone">
       </div>
       <div class="form-group">
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
       </div>
       <button type="submit" class="btn btn-primary btn-block">Sign up</button>
-      <small class="form-text text-muted pt-3">You already have an account?, click <a href="provider_signin.php">here</a>.</small>
+      <small class="form-text text-muted pt-3">You already have an account?, click <a href="client_signin.php">here</a>.</small>
     </form>
 
     <!-- Optional JavaScript -->

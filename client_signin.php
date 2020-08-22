@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/global_sign.css">
 
-    <title>TimeToFood | Sign up</title>
+    <title>TimeToFood | Sign in</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,10 +23,10 @@
           <li class="nav-item">
             <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="client_signin.php">Client</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="provider_signin.php">Provider</a>
           </li>
         </ul>
@@ -34,22 +34,13 @@
     </nav>
     <form>
       <div class="form-group">
-        <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
-      </div>
-      <div class="form-group">
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" id="exampleInputRestaurant1" placeholder="Restaurant name">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" id="exampleInputPhone1" placeholder="Phone">
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email or username">
       </div>
       <div class="form-group">
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
       </div>
-      <button type="submit" class="btn btn-primary btn-block">Sign up</button>
-      <small class="form-text text-muted pt-3">You already have an account?, click <a href="provider_signin.php">here</a>.</small>
+      <button type="button" onclick="location = 'clientInterface.php';" class="btn btn-primary btn-block">Sign in</button>
+      <small id="emailHelp" class="form-text text-muted pt-3">You dont have an account yet?, click <a href="client_signup.php">here</a>.</small>
     </form>
 
     <!-- Optional JavaScript -->

@@ -39,7 +39,7 @@
       <div class="form-group">
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
       </div>
-      <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+      <button type="button" onclick="location = 'providerInterface.php';" class="btn btn-primary btn-block">Sign in</button>
       <small id="emailHelp" class="form-text text-muted pt-3">You dont have an account yet?, click <a href="provider_signup.php">here</a>.</small>
     </form>
 

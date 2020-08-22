@@ -20,20 +20,20 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="clientInterface.php">Search <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="providerInterface.php">Reservations <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="clientInterface_favorites.php">Favorites</a>
+            <a class="nav-link" href="providerInterface_tables.php">Tables</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="clientInterface_reservations.php">Reservations</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="clientInterface_profile.php">Profile</a>
+            <a class="nav-link" href="providerInterface_menu.php">Food menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="client_signin.php">Log out</a>
+            <a class="nav-link active" href="providerInterface_profile.php">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="provider_signin.php">Log out</a>
           </li>
         </ul>
       </div>
@@ -58,7 +58,6 @@
                       </div>
                     </div>
                   </div>
-                  <p class="card-text">You have $0</p>
                   <p class="card-text">314 2057083.</p>
                   <div class="row" style="height: 2em;">
                     <div class="col"><p class="card-text"><small class="text-muted">rutiliol@ucol.mx</small></p></div>
@@ -71,7 +70,7 @@
                             <a class="dropdown-item" role="button" data-toggle="modal" data-target="#mp">Edit profile</a>
                           </div>
                         </div>
-                        <button type="button" class="btn btn-secondary btn-sm">Recharge</button>
+                        <button type="button" class="btn btn-secondary btn-sm">Suscriptions</button>
                       </div>
                     </div>
                   </div>
