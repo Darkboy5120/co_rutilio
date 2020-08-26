@@ -24,12 +24,22 @@ html += `
                 <textarea class="form-control" id="ct-description" rows="3"
                   required></textarea>
               </div>
+              <div class="form-group">
+                <label for="ct-image">Image</label>
+                <input class="form-control" id="ct-image" type="file"
+                  autocomplete="off" required>
+              </div>
+              <div class="form-group">
+                <label for="ct-chairs">Chairs</label>
+                <input class="form-control" id="ct-chairs" type="number"
+                  min="1" autocomplete="off" required>
+              </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="ct-unavaliable" value="1" checked="checked">
+                <input class="form-check-input" type="radio" id="ct-unavailable" value="1" checked="checked">
                 <label class="form-check-label" for="ct-unavaliable">Unavailable</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="ct-avaliable" value="2">
+                <input class="form-check-input" type="radio" id="ct-available" value="2">
                 <label class="form-check-label" for="ct-avaliable">Available</label>
               </div>
               <button type="submit" id="fake-ct-create" style="display: none;"></button>
@@ -70,12 +80,22 @@ html += `
                 <textarea class="form-control" id="mt-description" rows="3"
                   required></textarea>
               </div>
+              <div class="form-group">
+                <label for="mt-image">Image (optional)</label>
+                <input class="form-control" id="mt-image" type="file"
+                  autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="mt-chairs">Chairs</label>
+                <input class="form-control" id="mt-chairs" type="number"
+                  min="1" autocomplete="off" required>
+              </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="mt-unavaliable" value="1" checked="checked">
+                <input class="form-check-input" type="radio" id="mt-unavailable" value="1" checked="checked">
                 <label class="form-check-label" for="mt-unavaliable">Unavailable</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="mt-avaliable" value="2">
+                <input class="form-check-input" type="radio" id="mt-available" value="2">
                 <label class="form-check-label" for="mt-avaliable">Available</label>
               </div>
               <button type="submit" id="fake-mt-modify" style="display: none;"></button>

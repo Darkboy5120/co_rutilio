@@ -24,13 +24,23 @@ html += `
                 <textarea class="form-control" id="cd-description" rows="3"
                   required></textarea>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="cd-unavaliable" value="1" checked="checked">
-                <label class="form-check-label" for="cd-unavaliable">Unavailable</label>
+              <div class="form-group">
+                <label for="cd-image">Image</label>
+                <input class="form-control" id="cd-image" type="file"
+                  autocomplete="off" required>
+              </div>
+              <div class="form-group">
+                <label for="cd-price">Price</label>
+                <input class="form-control" id="cd-price" type="number"
+                  min="1" autocomplete="off" required>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="cd-avaliable" value="2">
-                <label class="form-check-label" for="cd-avaliable">Available</label>
+                <input class="form-check-input" type="radio" id="cd-unavailable" value="1" checked="checked">
+                <label class="form-check-label" for="cd-unavailable">Unavailable</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="cd-available" value="2">
+                <label class="form-check-label" for="cd-available">Available</label>
               </div>
               <button type="submit" id="fake-cd-create" style="display: none;"></button>
             </form>
@@ -70,13 +80,23 @@ html += `
                 <textarea class="form-control" id="md-description" rows="3"
                   required></textarea>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="md-unavaliable" value="1" checked="checked">
-                <label class="form-check-label" for="md-unavaliable">Unavailable</label>
+              <div class="form-group">
+                <label for="md-image">Image (optional)</label>
+                <input class="form-control" id="md-image" type="file"
+                  autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="md-price">Price</label>
+                <input class="form-control" id="md-price" type="number"
+                  min="1" autocomplete="off" required>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="md-avaliable" value="2">
-                <label class="form-check-label" for="md-avaliable">Available</label>
+                <input class="form-check-input" type="radio" id="md-unavailable" value="1" checked="checked">
+                <label class="form-check-label" for="md-unavailable">Unavailable</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="md-available" value="2">
+                <label class="form-check-label" for="md-available">Available</label>
               </div>
               <button type="submit" id="fake-md-modify" style="display: none;"></button>
             </form>
