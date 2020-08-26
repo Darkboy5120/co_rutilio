@@ -12,5 +12,21 @@ form {
 	width: 15em;
 	display: block;
 	margin: auto;
+}
+
+form > div {
 	position: relative;
 }
+
+input {
+	padding-right: 3em !important;
+}
+
+input + i {
+	position: absolute;
+	top: .7em;
+	right: 1em;
+}
+
+input + .fa-times-circle { color: #c00; }
+input + .fa-check-circle { color: #0a0; }

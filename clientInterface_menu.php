@@ -1,3 +1,11 @@
+<?php
+require_once('assets/php/global_cookieInterface.php');
+if ($ci0->getcookie('client_id') === NULL) {
+  header('Location: client_signin.php');
+  exit;
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,6 +15,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Alertify -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Alertify Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
     <link rel="stylesheet" href="assets/css/clientInterface.css">
 
     <title>TimeToFood | Menu</title>
@@ -33,7 +47,7 @@
             <a class="nav-link" href="clientInterface_profile.php">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="client_signin.php">Log out</a>
+            <a class="nav-link" role="button" id="signout">Log out</a>
           </li>
         </ul>
       </div>
@@ -45,130 +59,10 @@
           <div class="input-group-prepend">
             <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#on">Order</button>
           </div>
-          <input type="text" class="form-control" style="max-width: 20em;" id="exampleInputSearch1" placeholder="Search">
+          <input type="text" class="form-control" style="max-width: 20em;" id="search" placeholder="Search">
         </div>
       </div>
-      <div class="row">
-        <div class="col mt-3">
-          <div class="card" style="width: 18rem;">
-            <img src="assets/files/img/menu1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Res steak</h5>
-              <p class="card-text">Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <b>$19</b>
-                <b class="text-success">Available</b>
-              </div>
-              <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
-                  <button type="button" class="btn btn-secondary disabled" data-menu-display="0">0</button>
-                  <button type="button" class="btn btn-primary" data-menu-add="0"><i class="fas fa-plus"></i></button>
-                  <button type="button" class="btn btn-danger d-none" data-menu-remove="0"><i class="fas fa-minus"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col mt-3">
-          <div class="card" style="width: 18rem;">
-            <img src="assets/files/img/menu1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Res steak</h5>
-              <p class="card-text">Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <b>$19</b>
-                <b class="text-success">Available</b>
-              </div>
-              <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
-                  <button type="button" class="btn btn-secondary disabled" data-menu-display="0">0</button>
-                  <button type="button" class="btn btn-primary" data-menu-add="0"><i class="fas fa-plus"></i></button>
-                  <button type="button" class="btn btn-danger d-none" data-menu-remove="0"><i class="fas fa-minus"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col mt-3">
-          <div class="card" style="width: 18rem;">
-            <img src="assets/files/img/menu1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Res steak</h5>
-              <p class="card-text">Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <b>$19</b>
-                <b class="text-success">Available</b>
-              </div>
-              <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
-                  <button type="button" class="btn btn-secondary disabled" data-menu-display="0">0</button>
-                  <button type="button" class="btn btn-primary" data-menu-add="0"><i class="fas fa-plus"></i></button>
-                  <button type="button" class="btn btn-danger d-none" data-menu-remove="0"><i class="fas fa-minus"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col mt-3">
-          <div class="card" style="width: 18rem;">
-            <img src="assets/files/img/menu1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Res steak</h5>
-              <p class="card-text">Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <b>$19</b>
-                <b class="text-success">Available</b>
-              </div>
-              <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
-                  <button type="button" class="btn btn-secondary disabled" data-menu-display="0">0</button>
-                  <button type="button" class="btn btn-primary" data-menu-add="0"><i class="fas fa-plus"></i></button>
-                  <button type="button" class="btn btn-danger d-none" data-menu-remove="0"><i class="fas fa-minus"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col mt-3">
-          <div class="card" style="width: 18rem;">
-            <img src="assets/files/img/menu1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Res steak</h5>
-              <p class="card-text">Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <b>$19</b>
-                <b class="text-success">Available</b>
-              </div>
-              <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
-                  <button type="button" class="btn btn-secondary disabled" data-menu-display="0">0</button>
-                  <button type="button" class="btn btn-primary" data-menu-add="0"><i class="fas fa-plus"></i></button>
-                  <button type="button" class="btn btn-danger d-none" data-menu-remove="0"><i class="fas fa-minus"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col mt-3">
-          <div class="card" style="width: 18rem;">
-            <img src="assets/files/img/menu1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Res steak</h5>
-              <p class="card-text">Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <b>$19</b>
-                <b class="text-success">Available</b>
-              </div>
-              <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
-                  <button type="button" class="btn btn-secondary disabled" data-menu-display="0">0</button>
-                  <button type="button" class="btn btn-primary" data-menu-add="0"><i class="fas fa-plus"></i></button>
-                  <button type="button" class="btn btn-danger d-none" data-menu-remove="0"><i class="fas fa-minus"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="row" id="dishes">
       </div>
     </div>
 
@@ -182,8 +76,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/0a71ea5010.js"></script>
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Alertify -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script src="assets/js/clientInterface_menu_modalTemplate.js"></script>
     <script src="assets/js/clientInterface_menu.js"></script>
   </body>

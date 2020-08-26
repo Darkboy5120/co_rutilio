@@ -19,6 +19,7 @@ html += `
                 <input class="form-control" id="on-date" type="datetime-local"
                   autocomplete="off" required>
               </div>
+              <h5>Total is $<b id="on-total"></b></h5>
               <button type="submit" id="fake-on-create" style="display: none;"></button>
             </form>
           </div>

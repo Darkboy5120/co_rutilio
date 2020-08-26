@@ -1,3 +1,11 @@
+<?php
+require_once('assets/php/global_cookieInterface.php');
+if ($ci0->getcookie('provider_id') === NULL) {
+  header('Location: provider_signin.php');
+  exit;
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,7 +15,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/clientInterface.css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Alertify -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Alertify Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
 
     <title>TimeToFood | Reservations</title>
   </head>
@@ -33,29 +46,14 @@
             <a class="nav-link" href="providerInterface_profile.php">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="provider_signin.php">Log out</a>
+            <a class="nav-link" role="button" id="signout">Log out</a>
           </li>
         </ul>
       </div>
     </nav>
 
     <div class="container mt-3">
-      <div class="row">
-        <div class="col mt-3">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Big table</h6>
-              <p class="card-text">Has 19 chairs and good display to see televition.</p>
-              <div class="row" style="height: 2em;">
-                <div class="col"><small class="text-muted">To 10/12/2020</small></div>
-                <div class="col"><a role="button" href="providerInterface_reservations.php" class="btn btn-primary btn-sm btn-block">Check</a></div>
-              </div>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">3 mins ago by Rutilio</small>
-            </div>
-          </div>
-        </div>
+      <div class="row" id="reservations">
       </div>
     </div>
 
@@ -64,6 +62,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/0a71ea5010.js"></script>
+    <!-- Alertify -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="assets/js/providerInterface.js"></script>
   </body>
 </html>

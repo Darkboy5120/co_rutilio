@@ -17,19 +17,19 @@ html += `
               <div class="form-group">
                 <label for="mp-username">Username</label>
                 <input class="form-control" id="mp-username" type="text"
-                  minlength="5" maxlength="5"
+                  minlength="5" maxlength="50"
                   autocomplete="off" required>
               </div>
               <div class="form-group">
                 <label for="mp-phone">Phone</label>
                 <input class="form-control" id="mp-phone" type="text"
-                  minlength="5" maxlength="15"
+                  minlength="10" maxlength="10"
                   autocomplete="off" required>
               </div>
               <div class="form-group">
-                <label for="mp-image">Image</label>
+                <label for="mp-image">Image (optional)</label>
                 <input class="form-control" id="mp-image" type="file"
-                  autocomplete="off" required>
+                  autocomplete="off">
               </div>
               <button type="submit" id="fake-mp-modify" style="display: none;"></button>
             </form>
