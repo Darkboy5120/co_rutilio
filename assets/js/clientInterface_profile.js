@@ -164,6 +164,7 @@ const Users = () => {
 	  $('#mp-username').trigger('focus');
 	});
 
+	document.querySelector('#signout').onclick = signOut;
 	document.querySelector('#mp-modify').onclick = function () {
 		document.querySelector('#fake-mp-modify').click();
 	};
