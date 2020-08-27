@@ -8,7 +8,7 @@ const Users = () => {
 		fetch('assets/php/global_signOut.php')
 		.then(response => response.json())
 		.then(response => {
-			if (response == 1) location = 'client_signin.php';
+			if (response == 1) location = 'provider_signin.php';
 		});
 	};
 
