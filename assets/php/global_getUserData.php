@@ -8,8 +8,8 @@ if ($ci0->getCookie('provider_id') !== NULL
   ) {
 
 	$user_id = ($ci0->getCookie('provider_id') !== NULL) 
-		? $ci0->getCookie('provider_id') !== NULL
-		: $ci0->getCookie('client_id') !== NULL;
+		? $ci0->getCookie('provider_id')
+		: $ci0->getCookie('client_id');
 
 	$sql = ($ci0->getCookie('provider_id') !== NULL) 
 		? 'SELECT id, username, email, restaurant, phone, description, levelpoints, url FROM Providers
