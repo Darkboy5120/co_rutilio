@@ -1,7 +1,7 @@
 <?php
 require_once('assets/php/global_cookieInterface.php');
 if ($ci0->getcookie('client_id') !== NULL) {
-  header('Location: clientInterface.php');
+  header('Location: client_signin.php');
   exit;
 }
 ?>
