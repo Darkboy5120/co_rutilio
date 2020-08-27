@@ -1,7 +1,7 @@
 <?php
 require_once('assets/php/global_cookieInterface.php');
 if ($ci0->getcookie('provider_id') !== NULL) {
-  header('Location: providerInterface.php');
+  header('Location: provider_signin.php');
   exit;
 }
 ?>
