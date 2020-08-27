@@ -95,7 +95,7 @@ const Users = () => {
 	              <h5 class="card-title">${d_name}</h5>
 	              <p class="card-text">${d_desc}</p>
 	              <div class="d-flex align-items-center justify-content-between">
-	                <b>${d_price} chairs</b>
+	                <b>$${d_price}</b>
 	                ${d_available_txt}
 	              </div>
 	              <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
