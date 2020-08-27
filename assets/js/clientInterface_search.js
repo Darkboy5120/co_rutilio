@@ -139,7 +139,7 @@ const Users = () => {
 	document.querySelector('#signout').onclick = signOut;
 	document.querySelector('#search').onkeyup = e => {
 		globals.filter = e.target.value;
-		drawRestaurants();
+		getRestaurants();
 	};
 
 	return {
