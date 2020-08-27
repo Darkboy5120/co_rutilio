@@ -247,6 +247,10 @@ const Users = () => {
 	});
 
 	document.querySelector('#signout').onclick = signOut;
+	document.querySelector('#search').onkeyup = e => {
+		globals.filter = e.target.value;
+		drawDishes();
+	};
 	document.querySelector('#on-create').onclick = function () {
 		document.querySelector('#fake-on-create').click();
 	};
