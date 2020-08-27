@@ -16,7 +16,7 @@ if ($ci0->getCookie('provider_id') !== NULL
 		SELECT
 			id, username, email, levelpoints, phone, url
 		FROM
-			CLients
+			Clients
 		WHERE
 			id = ?',
 		$client_id
