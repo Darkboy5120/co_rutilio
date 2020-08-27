@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `Providers`(
 	`credit` INT UNSIGNED DEFAULT 0,
 	`levelpoints` INT NOT NULL DEFAULT 0,
 	`url` VARCHAR(255) NULL,
-	`description` TEXT NULL,
+	`description` TEXT DEFAULT '',
 	`date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY(id),
 	UNIQUE KEY(username),
