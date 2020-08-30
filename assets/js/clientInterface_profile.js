@@ -59,7 +59,7 @@ const Users = () => {
           <div class="card mb-3" style="max-width: 540px;">
             <div class="row no-gutters">
               <div class="col-md-4">
-                <img src="assets/files/img/default.png" class="card-img" alt="...">
+                <img src="${c_url}" class="card-img" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
